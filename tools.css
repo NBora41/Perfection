@@ -1,0 +1,114 @@
+@import url("https://fonts.google.com/specimen/Jost?selection.family=Jost:ital,wg");
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size:65.5%;
+    font-family:"jost",sans-serif;
+   
+}
+.main{
+    width:100vw;
+    height:100vh;
+    background-color: aqua;
+ display:grid;
+ place-items: center;
+}
+.music_container{
+    width:35rem;
+    height:55rem;
+    background-color: palevioletred;
+    border-radius:12px ;
+    box-shadow:1rem 2rem 3rem .5rem rgba(0,0,0,0.3);
+   /* align-items: center;
+    justify-content: center;*/
+    text-align: center;
+  
+
+}
+.music_container #title{
+    text-transform:uppercase;
+    letter-spacing: .2rem;
+    word-spacing: .4rem;
+    color:white;
+    margin:2rem 0 0.5rem rgba(0,0,0,0.3);
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    font-weight:500;
+    text-shadow:0 0.3rem 0.5rem rgba(0,0,0,0.3);
+}
+.music_container #artist{
+ margin:auto;
+ color: #111111;
+letter-spacing: 0.1rem;
+margin-top:1rem;
+margin-bottom: 1rem;
+font-weight:300;
+
+
+}
+.img-container{
+    width:25rem;
+    height:25rem;
+    margin:auto;
+
+
+}
+img{
+    width:80%;
+    height:100%;
+    box-shadow:0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+    border-radius: 50%;
+    object-fit:cover;
+    
+}
+.music_controls {
+    width:20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5rem;
+    align-items: center;
+
+}
+.music_controls .fa{
+ columns: #111111;
+ font-size:4rem;
+ cursor: pointer;
+ filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
+.music_controls .main-button{
+    width:5rem;
+    height:5rem;
+border-radius: 50%;
+background-color: #111111;
+color: #cccaca;
+font-size: 1.4rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.music_controls .fa:hover{
+    color: gray;
+    transform: scale(1.5);
+}
+.music_controls .main-button:hover{
+    color: black;
+    background-color: #cccaca;
+}
+.anime{
+    animation: player 3s linear infinite ;
+}
+@keyframes player{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

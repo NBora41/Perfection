@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MUSIC SYSYTEM</title>
+        <meta name="viewpoint" content="width=device-width,initial=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="tools.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+        
+    </head>
+    <body>
+        <div class="main">
+            <div class="music_container">
+                <h1 id="title">Rockstar </h1>
+                <h3 id="artist">PA-B-L-O</h3>
+                <div class="mg-container">
+         <img src="dogi.png" alt=" ">
+        
+                </div>
+              <audio src="Rockstar Ringtone.mp3" ></audio>
+               
+                <div class="music_controls">
+
+                    <i class="fa fa-backward " aria-hidden="true" title ="previous" id="prev"></i>
+                    <i class="fa fa-play main-button" aria-hidden="true" title="play" id="play"></i>
+                    <i class="fa fa-forward" aria-hidden="true" title="next" id="next"></i>
+
+                </div>
+            </div>
+        </div>
+       <script type="text/javascript">
+            const music =document.querySelector("audio");
+            const img= document.querySelector("img");
+            const player=document.getElementById("play");
+            const prev=document.getElementById("prev");
+            const next =document.getElementById("next");
+           // const title =document.getElementById("title");
+            const artist =document .querySelector("h3");
+            const title=document.querySelector("h1");
+            let isPlaying =false;
+            const songs=[
+                {
+                    name:"kolaveri",
+                    title:"Why dis kolaveri",
+                    artist:"prabhu shankar"
+                },
+                {
+                    name:"huyvdsu",
+                    title:"nbhgfyug",
+                    artist:"jnhbvc"
+                },
+                {
+                    name:"jh",
+                    title:"hbg",
+                    artist:"jhbgv"
+                }
+            ];
+        const PlayMusic=function() {
+            isPlaying=true;
+                     music.play();   
+                     play.classList.replace("fa-play","fa-pause");
+                     img.classList.add("anime");
+               
+
+
+            };
+
+        const pauseMusic=function(){
+                isPlaying=false;
+                     music.pause();
+                     play.classList.replace("fa-pause","fa-play");
+                     img.classList.remove("anime");
+            };
+play.addEventListener("click",function(){
+  isPlaying ? pauseMusic() : PlayMusic();
+
+
+});
+const loadSong=(songs) =>{
+   title.textContent=songs.title;
+   artist.textContent=songs.artist;
+   music.src="music/"+songs.name+".mp3";
+   img.src="image/"+songs.name+".jpg"
+};
+
+prev.addEventListener("click",function(){
+    loadSong(songs);
+
+});
+
+        </script>
+    </body>
+</html>
